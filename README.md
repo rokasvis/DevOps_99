@@ -1,4 +1,16 @@
 # DevOps Intro
+DevOps is a set of practices intended to reduce the time between comitting a change to a system and the change being placed into normal production while ensuring high production.
+
+**DevOps principles**
+- Customer-Centric Action
+- End-To-End Responsibility
+- Continuos Improvement
+- Automate Everything
+- Work as one team
+- Monitor and test everything
+
+
+
 ## Development Env
 
 - Install vagrant
@@ -45,8 +57,31 @@ end
 - provision the steps of updating, upgrading and nginx installation
   
 > vagrant up again
-- redo all the steps 
-- install nginx and load it in the browser 
+- `vagrant status` to see if vagrant is running
+- `vagrant ssh` to open a vm
+- `touch provision.sh` to create an sh file
+- `nano provision.sh` to edit provision file and add the following comands:
+```
+#!/bin/bash
 
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get install nginx -y
+
+```
+- save and close provision.sh
+- make provission.sh executable by:
+- `sudo chmod +x provision.sh`
+- run sh file by `./provision.sh`
+- now you are able to launch nginx on your browser 
+
+### Pipes and Filters
+
+A pipe can pass the standard output of one operation to the standard input of another, but a filter can modify the stream. A filter takes the standard input, does something useful with it, and then returns it as a standard output. Linux has a large number of filters. Some useful ones are the commands awk, grep, sed, spell, and wc.
+
+**Display first 2 lines in a file
+`cat <filename> | head -2`
+**Display last 2 lines in file
+`cat <filename> | tail -2`
 
 
