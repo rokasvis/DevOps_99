@@ -79,9 +79,10 @@ sudo apt-get install nginx -y
 
 A pipe can pass the standard output of one operation to the standard input of another, but a filter can modify the stream. A filter takes the standard input, does something useful with it, and then returns it as a standard output. Linux has a large number of filters. Some useful ones are the commands awk, grep, sed, spell, and wc.
 
-**Display first 2 lines in a file
+**Display first 2 lines in a file**
 `cat <filename> | head -2`
-**Display last 2 lines in file
+
+**Display last 2 lines in file**
 `cat <filename> | tail -2`
 
 
